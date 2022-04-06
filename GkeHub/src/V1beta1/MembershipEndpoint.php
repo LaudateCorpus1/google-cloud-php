@@ -23,8 +23,8 @@ class MembershipEndpoint extends \Google\Protobuf\Internal\Message
      */
     private $kubernetes_metadata = null;
     /**
-     * Optional. The in-cluster Kubernetes Resources that should be applied for a correctly
-     * registered cluster, in the steady state. These resources:
+     * Optional. The in-cluster Kubernetes Resources that should be applied for a
+     * correctly registered cluster, in the steady state. These resources:
      *   * Ensure that the cluster is exclusively registered to one and only one
      *     Hub Membership.
      *   * Propagate Workload Pool Information available in the Membership
@@ -51,8 +51,8 @@ class MembershipEndpoint extends \Google\Protobuf\Internal\Message
      *     @type \Google\Cloud\GkeHub\V1beta1\KubernetesMetadata $kubernetes_metadata
      *           Output only. Useful Kubernetes-specific metadata.
      *     @type \Google\Cloud\GkeHub\V1beta1\KubernetesResource $kubernetes_resource
-     *           Optional. The in-cluster Kubernetes Resources that should be applied for a correctly
-     *           registered cluster, in the steady state. These resources:
+     *           Optional. The in-cluster Kubernetes Resources that should be applied for a
+     *           correctly registered cluster, in the steady state. These resources:
      *             * Ensure that the cluster is exclusively registered to one and only one
      *               Hub Membership.
      *             * Propagate Workload Pool Information available in the Membership
@@ -166,7 +166,7 @@ class MembershipEndpoint extends \Google\Protobuf\Internal\Message
      */
     public function getKubernetesMetadata()
     {
-        return isset($this->kubernetes_metadata) ? $this->kubernetes_metadata : null;
+        return $this->kubernetes_metadata;
     }
 
     public function hasKubernetesMetadata()
@@ -195,8 +195,8 @@ class MembershipEndpoint extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Optional. The in-cluster Kubernetes Resources that should be applied for a correctly
-     * registered cluster, in the steady state. These resources:
+     * Optional. The in-cluster Kubernetes Resources that should be applied for a
+     * correctly registered cluster, in the steady state. These resources:
      *   * Ensure that the cluster is exclusively registered to one and only one
      *     Hub Membership.
      *   * Propagate Workload Pool Information available in the Membership
@@ -208,7 +208,7 @@ class MembershipEndpoint extends \Google\Protobuf\Internal\Message
      */
     public function getKubernetesResource()
     {
-        return isset($this->kubernetes_resource) ? $this->kubernetes_resource : null;
+        return $this->kubernetes_resource;
     }
 
     public function hasKubernetesResource()
@@ -222,8 +222,8 @@ class MembershipEndpoint extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Optional. The in-cluster Kubernetes Resources that should be applied for a correctly
-     * registered cluster, in the steady state. These resources:
+     * Optional. The in-cluster Kubernetes Resources that should be applied for a
+     * correctly registered cluster, in the steady state. These resources:
      *   * Ensure that the cluster is exclusively registered to one and only one
      *     Hub Membership.
      *   * Propagate Workload Pool Information available in the Membership

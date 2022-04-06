@@ -157,6 +157,20 @@ class Subscription extends \Google\Protobuf\Internal\Message
      */
     private $detached = false;
     /**
+     * If true, Pub/Sub provides the following guarantees for the delivery of
+     * a message with a given value of `message_id` on this subscription:
+     * * The message sent to a subscriber is guaranteed not to be resent
+     * before the message's acknowledgement deadline expires.
+     * * An acknowledged message will not be resent to a subscriber.
+     * Note that subscribers may still receive multiple copies of a message
+     * when `enable_exactly_once_delivery` is true if the message was published
+     * multiple times by a publisher client. These copies are  considered distinct
+     * by Pub/Sub and have distinct `message_id` values.
+     *
+     * Generated from protobuf field <code>bool enable_exactly_once_delivery = 16;</code>
+     */
+    private $enable_exactly_once_delivery = false;
+    /**
      * Output only. Indicates the minimum duration for which a message is retained
      * after it is published to the subscription's topic. If this field is set,
      * messages published to the subscription's topic in the last
@@ -263,6 +277,16 @@ class Subscription extends \Google\Protobuf\Internal\Message
      *           backlog. `Pull` and `StreamingPull` requests will return
      *           FAILED_PRECONDITION. If the subscription is a push subscription, pushes to
      *           the endpoint will not be made.
+     *     @type bool $enable_exactly_once_delivery
+     *           If true, Pub/Sub provides the following guarantees for the delivery of
+     *           a message with a given value of `message_id` on this subscription:
+     *           * The message sent to a subscriber is guaranteed not to be resent
+     *           before the message's acknowledgement deadline expires.
+     *           * An acknowledged message will not be resent to a subscriber.
+     *           Note that subscribers may still receive multiple copies of a message
+     *           when `enable_exactly_once_delivery` is true if the message was published
+     *           multiple times by a publisher client. These copies are  considered distinct
+     *           by Pub/Sub and have distinct `message_id` values.
      *     @type \Google\Protobuf\Duration $topic_message_retention_duration
      *           Output only. Indicates the minimum duration for which a message is retained
      *           after it is published to the subscription's topic. If this field is set,
@@ -353,7 +377,7 @@ class Subscription extends \Google\Protobuf\Internal\Message
      */
     public function getPushConfig()
     {
-        return isset($this->push_config) ? $this->push_config : null;
+        return $this->push_config;
     }
 
     public function hasPushConfig()
@@ -490,7 +514,7 @@ class Subscription extends \Google\Protobuf\Internal\Message
      */
     public function getMessageRetentionDuration()
     {
-        return isset($this->message_retention_duration) ? $this->message_retention_duration : null;
+        return $this->message_retention_duration;
     }
 
     public function hasMessageRetentionDuration()
@@ -596,7 +620,7 @@ class Subscription extends \Google\Protobuf\Internal\Message
      */
     public function getExpirationPolicy()
     {
-        return isset($this->expiration_policy) ? $this->expiration_policy : null;
+        return $this->expiration_policy;
     }
 
     public function hasExpirationPolicy()
@@ -677,7 +701,7 @@ class Subscription extends \Google\Protobuf\Internal\Message
      */
     public function getDeadLetterPolicy()
     {
-        return isset($this->dead_letter_policy) ? $this->dead_letter_policy : null;
+        return $this->dead_letter_policy;
     }
 
     public function hasDeadLetterPolicy()
@@ -724,7 +748,7 @@ class Subscription extends \Google\Protobuf\Internal\Message
      */
     public function getRetryPolicy()
     {
-        return isset($this->retry_policy) ? $this->retry_policy : null;
+        return $this->retry_policy;
     }
 
     public function hasRetryPolicy()
@@ -792,6 +816,48 @@ class Subscription extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * If true, Pub/Sub provides the following guarantees for the delivery of
+     * a message with a given value of `message_id` on this subscription:
+     * * The message sent to a subscriber is guaranteed not to be resent
+     * before the message's acknowledgement deadline expires.
+     * * An acknowledged message will not be resent to a subscriber.
+     * Note that subscribers may still receive multiple copies of a message
+     * when `enable_exactly_once_delivery` is true if the message was published
+     * multiple times by a publisher client. These copies are  considered distinct
+     * by Pub/Sub and have distinct `message_id` values.
+     *
+     * Generated from protobuf field <code>bool enable_exactly_once_delivery = 16;</code>
+     * @return bool
+     */
+    public function getEnableExactlyOnceDelivery()
+    {
+        return $this->enable_exactly_once_delivery;
+    }
+
+    /**
+     * If true, Pub/Sub provides the following guarantees for the delivery of
+     * a message with a given value of `message_id` on this subscription:
+     * * The message sent to a subscriber is guaranteed not to be resent
+     * before the message's acknowledgement deadline expires.
+     * * An acknowledged message will not be resent to a subscriber.
+     * Note that subscribers may still receive multiple copies of a message
+     * when `enable_exactly_once_delivery` is true if the message was published
+     * multiple times by a publisher client. These copies are  considered distinct
+     * by Pub/Sub and have distinct `message_id` values.
+     *
+     * Generated from protobuf field <code>bool enable_exactly_once_delivery = 16;</code>
+     * @param bool $var
+     * @return $this
+     */
+    public function setEnableExactlyOnceDelivery($var)
+    {
+        GPBUtil::checkBool($var);
+        $this->enable_exactly_once_delivery = $var;
+
+        return $this;
+    }
+
+    /**
      * Output only. Indicates the minimum duration for which a message is retained
      * after it is published to the subscription's topic. If this field is set,
      * messages published to the subscription's topic in the last
@@ -804,7 +870,7 @@ class Subscription extends \Google\Protobuf\Internal\Message
      */
     public function getTopicMessageRetentionDuration()
     {
-        return isset($this->topic_message_retention_duration) ? $this->topic_message_retention_duration : null;
+        return $this->topic_message_retention_duration;
     }
 
     public function hasTopicMessageRetentionDuration()

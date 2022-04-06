@@ -16,8 +16,9 @@ use Google\Protobuf\Internal\GPBUtil;
 class Membership extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Output only. The full, unique name of this Membership resource in the format
-     * `projects/&#42;&#47;locations/&#42;&#47;memberships/{membership_id}`, set during creation.
+     * Output only. The full, unique name of this Membership resource in the
+     * format `projects/&#42;&#47;locations/&#42;&#47;memberships/{membership_id}`, set during
+     * creation.
      * `membership_id` must be a valid RFC 1123 compliant DNS label:
      *   1. At most 63 characters in length
      *   2. It must consist of lower case alphanumeric characters or `-`
@@ -74,9 +75,10 @@ class Membership extends \Google\Protobuf\Internal\Message
      */
     private $delete_time = null;
     /**
-     * Optional. An externally-generated and managed ID for this Membership. This ID may
-     * be modified after creation, but this is not recommended. For GKE clusters,
-     * external_id is managed by the Hub API and updates will be ignored.
+     * Optional. An externally-generated and managed ID for this Membership. This
+     * ID may be modified after creation, but this is not recommended. For GKE
+     * clusters, external_id is managed by the Hub API and updates will be
+     * ignored.
      * The ID must match the regex: `[a-zA-Z0-9][a-zA-Z0-9_\-\.]*`
      * If this Membership represents a Kubernetes cluster, this value should be
      * set to the UID of the `kube-system` namespace object.
@@ -85,17 +87,18 @@ class Membership extends \Google\Protobuf\Internal\Message
      */
     private $external_id = '';
     /**
-     * Output only. For clusters using Connect, the timestamp of the most recent connection
-     * established with Google Cloud. This time is updated every several minutes,
-     * not continuously. For clusters that do not use GKE Connect, or that have
-     * never connected successfully, this field will be unset.
+     * Output only. For clusters using Connect, the timestamp of the most recent
+     * connection established with Google Cloud. This time is updated every
+     * several minutes, not continuously. For clusters that do not use GKE
+     * Connect, or that have never connected successfully, this field will be
+     * unset.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp last_connection_time = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private $last_connection_time = null;
     /**
-     * Output only. Google-generated UUID for this resource. This is unique across all
-     * Membership resources. If a Membership resource is deleted and another
+     * Output only. Google-generated UUID for this resource. This is unique across
+     * all Membership resources. If a Membership resource is deleted and another
      * resource with the same name is created, it gets a different unique_id.
      *
      * Generated from protobuf field <code>string unique_id = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -116,8 +119,9 @@ class Membership extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $name
-     *           Output only. The full, unique name of this Membership resource in the format
-     *           `projects/&#42;&#47;locations/&#42;&#47;memberships/{membership_id}`, set during creation.
+     *           Output only. The full, unique name of this Membership resource in the
+     *           format `projects/&#42;&#47;locations/&#42;&#47;memberships/{membership_id}`, set during
+     *           creation.
      *           `membership_id` must be a valid RFC 1123 compliant DNS label:
      *             1. At most 63 characters in length
      *             2. It must consist of lower case alphanumeric characters or `-`
@@ -144,20 +148,22 @@ class Membership extends \Google\Protobuf\Internal\Message
      *     @type \Google\Protobuf\Timestamp $delete_time
      *           Output only. When the Membership was deleted.
      *     @type string $external_id
-     *           Optional. An externally-generated and managed ID for this Membership. This ID may
-     *           be modified after creation, but this is not recommended. For GKE clusters,
-     *           external_id is managed by the Hub API and updates will be ignored.
+     *           Optional. An externally-generated and managed ID for this Membership. This
+     *           ID may be modified after creation, but this is not recommended. For GKE
+     *           clusters, external_id is managed by the Hub API and updates will be
+     *           ignored.
      *           The ID must match the regex: `[a-zA-Z0-9][a-zA-Z0-9_\-\.]*`
      *           If this Membership represents a Kubernetes cluster, this value should be
      *           set to the UID of the `kube-system` namespace object.
      *     @type \Google\Protobuf\Timestamp $last_connection_time
-     *           Output only. For clusters using Connect, the timestamp of the most recent connection
-     *           established with Google Cloud. This time is updated every several minutes,
-     *           not continuously. For clusters that do not use GKE Connect, or that have
-     *           never connected successfully, this field will be unset.
+     *           Output only. For clusters using Connect, the timestamp of the most recent
+     *           connection established with Google Cloud. This time is updated every
+     *           several minutes, not continuously. For clusters that do not use GKE
+     *           Connect, or that have never connected successfully, this field will be
+     *           unset.
      *     @type string $unique_id
-     *           Output only. Google-generated UUID for this resource. This is unique across all
-     *           Membership resources. If a Membership resource is deleted and another
+     *           Output only. Google-generated UUID for this resource. This is unique across
+     *           all Membership resources. If a Membership resource is deleted and another
      *           resource with the same name is created, it gets a different unique_id.
      *     @type int $infrastructure_type
      *           Optional. The infrastructure type this Membership is running on.
@@ -169,8 +175,9 @@ class Membership extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Output only. The full, unique name of this Membership resource in the format
-     * `projects/&#42;&#47;locations/&#42;&#47;memberships/{membership_id}`, set during creation.
+     * Output only. The full, unique name of this Membership resource in the
+     * format `projects/&#42;&#47;locations/&#42;&#47;memberships/{membership_id}`, set during
+     * creation.
      * `membership_id` must be a valid RFC 1123 compliant DNS label:
      *   1. At most 63 characters in length
      *   2. It must consist of lower case alphanumeric characters or `-`
@@ -187,8 +194,9 @@ class Membership extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Output only. The full, unique name of this Membership resource in the format
-     * `projects/&#42;&#47;locations/&#42;&#47;memberships/{membership_id}`, set during creation.
+     * Output only. The full, unique name of this Membership resource in the
+     * format `projects/&#42;&#47;locations/&#42;&#47;memberships/{membership_id}`, set during
+     * creation.
      * `membership_id` must be a valid RFC 1123 compliant DNS label:
      *   1. At most 63 characters in length
      *   2. It must consist of lower case alphanumeric characters or `-`
@@ -301,7 +309,7 @@ class Membership extends \Google\Protobuf\Internal\Message
      */
     public function getState()
     {
-        return isset($this->state) ? $this->state : null;
+        return $this->state;
     }
 
     public function hasState()
@@ -339,7 +347,7 @@ class Membership extends \Google\Protobuf\Internal\Message
      */
     public function getAuthority()
     {
-        return isset($this->authority) ? $this->authority : null;
+        return $this->authority;
     }
 
     public function hasAuthority()
@@ -377,7 +385,7 @@ class Membership extends \Google\Protobuf\Internal\Message
      */
     public function getCreateTime()
     {
-        return isset($this->create_time) ? $this->create_time : null;
+        return $this->create_time;
     }
 
     public function hasCreateTime()
@@ -413,7 +421,7 @@ class Membership extends \Google\Protobuf\Internal\Message
      */
     public function getUpdateTime()
     {
-        return isset($this->update_time) ? $this->update_time : null;
+        return $this->update_time;
     }
 
     public function hasUpdateTime()
@@ -449,7 +457,7 @@ class Membership extends \Google\Protobuf\Internal\Message
      */
     public function getDeleteTime()
     {
-        return isset($this->delete_time) ? $this->delete_time : null;
+        return $this->delete_time;
     }
 
     public function hasDeleteTime()
@@ -478,9 +486,10 @@ class Membership extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Optional. An externally-generated and managed ID for this Membership. This ID may
-     * be modified after creation, but this is not recommended. For GKE clusters,
-     * external_id is managed by the Hub API and updates will be ignored.
+     * Optional. An externally-generated and managed ID for this Membership. This
+     * ID may be modified after creation, but this is not recommended. For GKE
+     * clusters, external_id is managed by the Hub API and updates will be
+     * ignored.
      * The ID must match the regex: `[a-zA-Z0-9][a-zA-Z0-9_\-\.]*`
      * If this Membership represents a Kubernetes cluster, this value should be
      * set to the UID of the `kube-system` namespace object.
@@ -494,9 +503,10 @@ class Membership extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Optional. An externally-generated and managed ID for this Membership. This ID may
-     * be modified after creation, but this is not recommended. For GKE clusters,
-     * external_id is managed by the Hub API and updates will be ignored.
+     * Optional. An externally-generated and managed ID for this Membership. This
+     * ID may be modified after creation, but this is not recommended. For GKE
+     * clusters, external_id is managed by the Hub API and updates will be
+     * ignored.
      * The ID must match the regex: `[a-zA-Z0-9][a-zA-Z0-9_\-\.]*`
      * If this Membership represents a Kubernetes cluster, this value should be
      * set to the UID of the `kube-system` namespace object.
@@ -514,17 +524,18 @@ class Membership extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Output only. For clusters using Connect, the timestamp of the most recent connection
-     * established with Google Cloud. This time is updated every several minutes,
-     * not continuously. For clusters that do not use GKE Connect, or that have
-     * never connected successfully, this field will be unset.
+     * Output only. For clusters using Connect, the timestamp of the most recent
+     * connection established with Google Cloud. This time is updated every
+     * several minutes, not continuously. For clusters that do not use GKE
+     * Connect, or that have never connected successfully, this field will be
+     * unset.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp last_connection_time = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return \Google\Protobuf\Timestamp|null
      */
     public function getLastConnectionTime()
     {
-        return isset($this->last_connection_time) ? $this->last_connection_time : null;
+        return $this->last_connection_time;
     }
 
     public function hasLastConnectionTime()
@@ -538,10 +549,11 @@ class Membership extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Output only. For clusters using Connect, the timestamp of the most recent connection
-     * established with Google Cloud. This time is updated every several minutes,
-     * not continuously. For clusters that do not use GKE Connect, or that have
-     * never connected successfully, this field will be unset.
+     * Output only. For clusters using Connect, the timestamp of the most recent
+     * connection established with Google Cloud. This time is updated every
+     * several minutes, not continuously. For clusters that do not use GKE
+     * Connect, or that have never connected successfully, this field will be
+     * unset.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp last_connection_time = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param \Google\Protobuf\Timestamp $var
@@ -556,8 +568,8 @@ class Membership extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Output only. Google-generated UUID for this resource. This is unique across all
-     * Membership resources. If a Membership resource is deleted and another
+     * Output only. Google-generated UUID for this resource. This is unique across
+     * all Membership resources. If a Membership resource is deleted and another
      * resource with the same name is created, it gets a different unique_id.
      *
      * Generated from protobuf field <code>string unique_id = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -569,8 +581,8 @@ class Membership extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Output only. Google-generated UUID for this resource. This is unique across all
-     * Membership resources. If a Membership resource is deleted and another
+     * Output only. Google-generated UUID for this resource. This is unique across
+     * all Membership resources. If a Membership resource is deleted and another
      * resource with the same name is created, it gets a different unique_id.
      *
      * Generated from protobuf field <code>string unique_id = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
